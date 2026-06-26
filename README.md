@@ -34,9 +34,9 @@ VaultPass is a premium, offline-first Android password manager designed with pri
 |:---------------------------------------------:|:-------------------------------------------------:| :---: |
 | <img src="screenshots/Login.png" width="200"> | <img src="screenshots/Dashboard.png" width="200"> | <img src="screenshots/Password_Generator.png" width="200"> |
 
-|             First Entry              |               Settings               |
-|:------------------------------------:|:------------------------------------:|
-| <img src="screenshots/First_Entry_2.png" width="200"> | <img src="screenshots/Settings.png" width="200"> |
+|             First Entry              |               Settings               |            Update Dashboard            |
+|:------------------------------------:|:------------------------------------:|:--------------------------------------:|
+| <img src="screenshots/First_Entry_2.png" width="200"> | <img src="screenshots/Settings.png" width="200"> | <img src="screenshots/Dashboard_2.png" width="200"> |
 
 ## 🚦 Getting Started
 
