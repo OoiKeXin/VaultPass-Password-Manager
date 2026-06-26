@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="bg_dark">#0A0B08</color>
+    <color name="card_bg">#141511</color>
+    <color name="search_bg">#141511</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#A1A1A1</color>
+
+    <!-- Vibrant Lime Theme Accent -->
+    <color name="accent_lime">#AEEA00</color>
+    <color name="accent_purple">#947BFF</color>
+    <color name="accent_pink">#FF7EB3</color>
+    <color name="accent_blue">#00E5FF</color>
+    <color name="accent_orange">#FF9100</color>
+
+    <!-- Brand Colors -->
+    <color name="brand_amazon">#FF9900</color>
+    <color name="brand_github">#FFFFFF</color>
+    <color name="brand_google">#EA4335</color>
+    <color name="brand_netflix">#E50914</color>
+    <color name="brand_twitter">#1DA1F2</color>
+
+    <color name="divider_color">#1A1D2D</color>
+
+    <color name="bg_delete">#2D161A</color>
+    <color name="icon_delete">#FF4B5C</color>
+    <color name="bg_edit">#161D2D</color>
+    <color name="link_bg">#151829</color>
+</resources>

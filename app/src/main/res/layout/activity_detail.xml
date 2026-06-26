@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    tools:context=".DetailActivity">
+
+    <!-- Top Navigation -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topNav"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/circle_icon_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="12dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/circle_icon_bg"
+            android:clickable="true"
+            android:contentDescription="Delete"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="12dp"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/icon_delete" />
+
+        <ImageView
+            android:id="@+id/ivEdit"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/circle_icon_bg"
+            android:clickable="true"
+            android:contentDescription="Edit"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="12dp"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivDelete"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Content Section -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topNav">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+
+            <!-- Header Section -->
+            <ImageView
+                android:id="@+id/ivLargeIcon"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/icon_bg_large"
+                android:padding="32dp"
+                android:src="@drawable/ic_shopping_cart"
+                app:tint="@color/accent_lime" />
+
+            <TextView
+                android:id="@+id/tvDetailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/amazon"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/link_bg_rounded"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="6dp"
+                android:text="@string/amazon_url"
+                android:textColor="@color/accent_lime"
+                android:textSize="14sp" />
+
+            <!-- Details Card -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/item_bg_rounded"
+                android:padding="20dp">
+
+                <!-- Username Row -->
+                <ImageView
+                    android:id="@+id/ivUserIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/icon_bg_rounded"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_person"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/tvUsernameLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/username_label"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/ivUserIcon"
+                    app:layout_constraintTop_toTopOf="@+id/ivUserIcon" />
+
+                <TextView
+                    android:id="@+id/tvUsernameValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/amazon_email"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/ivCopyUser"
+                    app:layout_constraintStart_toStartOf="@+id/tvUsernameLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUsernameLabel" />
+
+                <ImageView
+                    android:id="@+id/ivCopyUser"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_copy"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivUserIcon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivUserIcon"
+                    app:tint="@color/text_secondary" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvUsernameLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUsernameValue" />
+
+                <!-- Password Row -->
+                <ImageView
+                    android:id="@+id/ivPassIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/icon_bg_rounded"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_key"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider"
+                    app:tint="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/tvPassLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/password_label"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/ivPassIcon"
+                    app:layout_constraintTop_toTopOf="@+id/ivPassIcon" />
+
+                <TextView
+                    android:id="@+id/tvPassValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:letterSpacing="0.2"
+                    android:text="@string/masked_password"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/ivTogglePass"
+                    app:layout_constraintStart_toStartOf="@+id/tvPassLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPassLabel" />
+
+                <ImageView
+                    android:id="@+id/ivTogglePass"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_visibility"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivPassIcon"
+                    app:layout_constraintEnd_toStartOf="@+id/ivCopyPass"
+                    app:layout_constraintTop_toTopOf="@+id/ivPassIcon"
+                    app:tint="@color/text_secondary" />
+
+                <ImageView
+                    android:id="@+id/ivCopyPass"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_copy"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivPassIcon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivPassIcon"
+                    app:tint="@color/text_secondary" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Advanced Details Card -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardAdvanced"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/item_bg_rounded"
+                android:padding="20dp">
+
+                <!-- PIN Row -->
+                <ImageView
+                    android:id="@+id/ivPinIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/icon_bg_rounded"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_lock"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/tvPinLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="PIN NUMBER"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/ivPinIcon"
+                    app:layout_constraintTop_toTopOf="@+id/ivPinIcon" />
+
+                <TextView
+                    android:id="@+id/tvPinValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="••••"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/ivTogglePin"
+                    app:layout_constraintStart_toStartOf="@+id/tvPinLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPinLabel" />
+
+                <ImageView
+                    android:id="@+id/ivTogglePin"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_visibility"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivPinIcon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivPinIcon"
+                    app:tint="@color/text_secondary" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvPinLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPinValue" />
+
+                <!-- Security Question Row -->
+                <ImageView
+                    android:id="@+id/ivQuestionIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/icon_bg_rounded"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_help"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider2"
+                    app:tint="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/tvQuestionLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="SECURITY QUESTION"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/ivQuestionIcon"
+                    app:layout_constraintTop_toTopOf="@+id/ivQuestionIcon" />
+
+                <TextView
+                    android:id="@+id/tvQuestionValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="N/A"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvQuestionLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/tvQuestionLabel" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvQuestionLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/tvQuestionValue" />
+
+                <!-- Security Answer Row -->
+                <ImageView
+                    android:id="@+id/ivAnswerIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/icon_bg_rounded"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_check"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider3"
+                    app:tint="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/tvAnswerLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="SECURITY ANSWER"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/ivAnswerIcon"
+                    app:layout_constraintTop_toTopOf="@+id/ivAnswerIcon" />
+
+                <TextView
+                    android:id="@+id/tvAnswerValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="••••••••"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/ivToggleAnswer"
+                    app:layout_constraintStart_toStartOf="@+id/tvAnswerLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAnswerLabel" />
+
+                <ImageView
+                    android:id="@+id/ivToggleAnswer"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_visibility"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivAnswerIcon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivAnswerIcon"
+                    app:tint="@color/text_secondary" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvAnswerLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAnswerValue" />
+
+                <!-- Notes Row -->
+                <ImageView
+                    android:id="@+id/ivNotesIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/icon_bg_rounded"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_notes"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider4"
+                    app:tint="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/tvNotesLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="SECURE NOTES"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/ivNotesIcon"
+                    app:layout_constraintTop_toTopOf="@+id/ivNotesIcon" />
+
+                <TextView
+                    android:id="@+id/tvNotesValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="No notes"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvNotesLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNotesLabel" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvLastUpdated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/last_updated"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

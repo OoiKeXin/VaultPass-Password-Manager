@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_bg_rounded"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_key"
+        app:tint="@color/accent_lime"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Key Icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Change Pin Number"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="24dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Enter your current and new pin to secure your vault."
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/etOldPin"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/edit_bg_rounded"
+        android:hint="Current Pin"
+        android:inputType="numberPassword"
+        android:digits="0123456789"
+        android:maxLength="6"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_secondary" />
+
+    <EditText
+        android:id="@+id/etNewPin"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_bg_rounded"
+        android:hint="New Pin"
+        android:inputType="numberPassword"
+        android:digits="0123456789"
+        android:maxLength="6"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_secondary" />
+
+    <EditText
+        android:id="@+id/etConfirmPin"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_bg_rounded"
+        android:hint="Confirm New Pin"
+        android:inputType="numberPassword"
+        android:digits="0123456789"
+        android:maxLength="6"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_secondary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnCancelPin"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg_rounded"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnSavePin"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg_lime"
+            android:gravity="center"
+            android:text="Save Pin"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

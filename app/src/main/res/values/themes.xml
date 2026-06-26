@@ -1,0 +1,69 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Assignment_1" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Splash Screen Background -->
+        <item name="android:windowBackground">@color/bg_dark</item>
+
+        <!-- Global Font Family -->
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:fontFamily">@font/poppins</item>
+
+        <item name="colorPrimary">@color/accent_lime</item>
+        <item name="materialAlertDialogTheme">@style/MaterialDialogTheme</item>
+    </style>
+
+    <style name="Theme.Assignment_1" parent="Base.Theme.Assignment_1" />
+
+    <style name="ShapeAppearance.App.FAB" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Theme for Custom Layout Dialogs (like Logout/Clear Data) -->
+    <style name="CustomAlertDialog" parent="Theme.Material3.DayNight.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- Theme for Standard Material Dialogs (like Auto-Lock Timer) -->
+    <style name="MaterialDialogTheme" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="android:background">@color/card_bg</item>
+        <!-- Background for the dialog surface -->
+        <item name="colorSurface">@color/card_bg</item>
+        <!-- Color for text and radio buttons -->
+        <item name="colorOnSurface">@color/white</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+
+        <!-- Text colors for the list items -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColor">@color/white</item>
+
+        <!-- Radio button colors -->
+        <item name="colorControlNormal">@color/text_secondary</item>
+        <item name="colorControlActivated">@color/accent_lime</item>
+
+        <item name="colorPrimary">@color/accent_lime</item>
+        <item name="colorAccent">@color/accent_lime</item>
+
+        <item name="materialAlertDialogTitleTextStyle">@style/DialogTitleText</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/DialogBodyText</item>
+    </style>
+
+    <style name="DialogTitleText" parent="MaterialAlertDialog.Material3.Title.Text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="DialogBodyText" parent="MaterialAlertDialog.Material3.Body.Text">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+</resources>
