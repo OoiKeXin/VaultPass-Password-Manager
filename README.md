@@ -53,6 +53,3 @@ VaultPass is a premium, offline-first Android password manager designed with pri
 
 ## 📄 License
 This project was developed for the **Mobile Application Development** course. 
-
----
-*Developed with ❤️ by Ooi Ke Xin*
